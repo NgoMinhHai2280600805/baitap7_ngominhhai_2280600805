@@ -1,9 +1,10 @@
 name: Deploy Static Website
 
 on:
-  push:
+  pull_request:
     branches:
-      - main   # giống rules của GitLab
+      - main
+  workflow_dispatch:  # giống rules của GitLab
 
 jobs:
   build-and-deploy:
